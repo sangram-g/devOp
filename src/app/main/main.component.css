@@ -1,0 +1,35 @@
+/* img {
+    height: 10px;
+    width: 10px;
+    color: blue;
+} */
+
+ul{
+  padding-left: 40px;
+  padding-top: 14px;
+}
+.disp {
+  display: block;
+  flex-direction: row;
+  justify-content : flex-start;
+  align-items: start;
+  border-left: 1px dotted #777;
+  padding-left:auto;
+  margin-left: auto;
+  padding-left: 8px;
+  /*position: relative;*/
+}
+.expand-icon {
+  background-image: url("../../assets/download.png");
+  height: 10px;
+  width: 10px;
+  background-size: contain;
+  left: 44px;
+}
+
+.reduced-icon {
+  background-image: url("../../assets/reduce.jpeg");
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+}

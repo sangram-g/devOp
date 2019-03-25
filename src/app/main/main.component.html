@@ -1,0 +1,12 @@
+<div *ngFor="let list of data">
+
+  <ul   style="list-style-type:none;">
+    <li class="disp" fxLayout="row">
+      <div  [ngClass]="{'expand-icon':!list.expand , 'reduced-icon':list.expand}"  class="expand-icon" (click)="expandList(list)" fxLayout="row" ></div>
+      <input type="checkbox" [checked]="list.expand" (change)="selectAllFolder(list)">
+      <span (click)="folderClicked(list)">{{list.name}}</span>
+      <app-main [data]="list.data" [entire]="entire" *ngIf="list.data && list.value"></app-main>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
