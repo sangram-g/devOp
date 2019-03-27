@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatInputModule, MatListModule, MatTabsModule} from '@angular/material';
+import {MatCheckboxModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,12 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatListModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatInputModule
 
   ],
   providers: [],

@@ -1,12 +1,41 @@
-<div *ngFor="let list of data">
 
-  <ul   style="list-style-type:none;">
-    <li class="disp" fxLayout="row">
-      <div  [ngClass]="{'expand-icon':!list.expand , 'reduced-icon':list.expand}"  class="expand-icon" (click)="expandList(list)" fxLayout="row" ></div>
-      <input type="checkbox" [checked]="list.expand" (change)="selectAllFolder(list)">
-      <span (click)="folderClicked(list)">{{list.name}}</span>
-      <app-main [data]="list.data" [entire]="entire" *ngIf="list.data && list.value"></app-main>
-    </li>
-  </ul>
+
+
+<div *ngFor="let list of data">
+   <ul   style="list-style-type:none;">
+       <li fxLayoutGap="3px">
+           <div [ngClass]="{'expand-icon':!list.value && (list.data?.length > 0) , 'reduced-icon':list.value && (list.data?.length > 0)}"  class="expand-list" (click)="expandList(list)"></div>
+           <mat-checkbox class="exmaple" [checked]="list.expand" (change)="selectAllFolder(list)" color="primary"></mat-checkbox>
+           <span (click)="folderClicked(list)">{{list.name}}</span>
+           <app-main [data]="list.data" [entire]="entire" *ngIf="list.data && list.value"></app-main>
+       </li>
+   </ul>
 </div>
 <router-outlet></router-outlet>
+
+<!--
+<div *ngFor="let list of data">
+  <ul   style="list-style-type:none;">
+      <div class="Simple" fxLayout="row">
+   <mat-list>  <li class="list-item" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">
+         <div  *ngIf="list.data.length > 0" [ngClass]="{'expand-icon':!list.value , 'reduced-icon':list.value}"  class="expand-icon" (click)="expandList(list)" fxLayout="row" ></div>
+          <mat-checkbox class="exmaple" [checked]="list.expand" (change)="selectAllFolder(list)" color="primary"></mat-checkbox>
+          <span (click)="folderClicked(list)">{{list.name}}</span>
+          <app-main [data]="list.data" [entire]="entire" *ngIf="list.data && list.value"></app-main>
+        </li>
+   </mat-list>
+      </div>
+    </ul>
+</div>-->
+
+
+<!--<div *ngFor="let list of data">-->
+<!--    <ul   style="list-style-type:none;">-->
+<!--        <li class="list-item" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">-->
+<!--            <div  *ngIf="list.data.length > 0" [ngClass]="{'expand-icon':!list.value , 'reduced-icon':list.value}"  class="expand-icon" (click)="expandList(list)" fxLayout="row" ></div>-->
+<!--            <mat-checkbox class="exmaple" [checked]="list.expand" (change)="selectAllFolder(list)" color="primary"></mat-checkbox>-->
+<!--            <span (click)="folderClicked(list)">{{list.name}}</span>-->
+<!--            <app-main [data]="list.data" [entire]="entire" *ngIf="list.data && list.value"></app-main>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</div>-->
