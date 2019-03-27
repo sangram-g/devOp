@@ -53,5 +53,6 @@ span{
   display: inline-block;
   height: 13px;
   width: 13px;
+  cursor: pointer;
 }
 

@@ -157,4 +157,8 @@ export class AppComponent {
     }
 
   ];
+
+  DisplayJson(list){
+    console.log("Display Json Array",list);
+  }
 }

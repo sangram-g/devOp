@@ -1,6 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-
+<div *ngIf="data">
+        <button type="button" (click)="DisplayJson(data)">PrintJson</button>
+        </div>
 
 <h2> Welcome to lib structure</h2>
 <app-main [data]="data" [entire]="data" ></app-main>
