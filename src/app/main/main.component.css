@@ -1,18 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 * Use : @font-face is import fonts
 */
@@ -20,20 +6,12 @@
   font-family: MyPopinsFont;
   src : url("~src/assets/fonts/Poppins-Regular.ttf");
 }
-
-/* ul, menu, dir {
-  padding-inline-start: 20px !important;
-  cursor: pointer;
-} */
-
-
 span{
   font-family:MyPopinsFont; /*align-items: ;*/
   font: icon;
   font-size: 15px;
 
 }
-
 
 .expand-icon {
   background-image: url("../../assets/icon/right-arrow-icon-27.png");

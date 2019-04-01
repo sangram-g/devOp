@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { isNgTemplate } from '@angular/compiler';
-import {isNullOrUndefined} from 'util';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-main',
@@ -17,26 +17,28 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   }
-
   /*
   Use : Click on value toggle value true or false as per clicked
   * */
   folderClicked(input_data) {
-    // input_data.value = !input_data.value;
+
     input_data.expand = !input_data.expand;
+
   }
 
   /*
   Use : select value when click in object data
   * */
   selectAllFolder(input_data) {
+
     console.log('input data', input_data);
     if (!input_data.value) {
       let foundFlag = this.UnChecked(this.entire, input_data);
     } else {
-    
+
       this.recursion(input_data);
     }
+
   }
 
   /*
@@ -75,48 +77,19 @@ export class MainComponent implements OnInit {
   /*
   Use : this function use for disSelected element
   * */
-  deSelectElements(input_data) {
-    if (input_data.data && input_data.data.length > 0) {
-      input_data.value = false;
-      input_data.data.forEach(item => {
-        this.deSelectElements(item);
-      });
-    } else {
-      input_data.expand = false; //!input_data.expand;
-    }
-  }
+  // deSelectElements(input_data) {
+  //   if (input_data.data && input_data.data.length > 0) {
+  //     input_data.value = false;
+  //     input_data.data.forEach(item => {
+  //       this.deSelectElements(item);
+  //     });
+  //   } else {
+  //     input_data.expand = false; //!input_data.expand;
+  //   }
+  // }
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   /*
-//   Use : Expand Checked on after clicked on ICON
-//   * */
-//  expandList(input_data) {
-//   input_data.value = !input_data.value;
-//   //  input_data.expand = false;
-//   if(input_data.expand === false) {
-//     this.recursion(input_data);
-//   //  input_data.expand = false;
-//   }
-// }
