@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'libstr';
+/*
+
+use : this data array of obejct for send value for template;
+*/
   data = [
     {
       id : 1,
