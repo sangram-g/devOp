@@ -35,7 +35,7 @@ export class AppComponent {
           {
             id : 5,
             name: 'F113',
-            value : true,
+            value : false,
             expand: false,
             data : []
           },
@@ -77,13 +77,13 @@ export class AppComponent {
         data: [{
           id : 11,
           name: 'F211',
-          value: true,
+          value: false,
           expand: false,
           data : [
             {
               id : 12,
               name : 'F2111',
-              value: true,
+              value: false,
               expand: false,
               data: []
             }
@@ -92,14 +92,14 @@ export class AppComponent {
           {
             id : 13,
             name: 'F212',
-            value : true,
+            value : false,
             expand: false,
             data: []
           },
           {
             id : 14,
             name: 'F213',
-            value: true,
+            value: false,
             expand: false,
             data : []
           }
@@ -108,14 +108,14 @@ export class AppComponent {
         {
           id : 15,
           name: 'F22',
-          value: true,
+          value: false,
           expand: false,
           data: []
         },
         {
           id : 16,
           name: 'F23',
-          value: true,
+          value: false,
           expand: false,
           data: []
         },
@@ -134,7 +134,7 @@ export class AppComponent {
         data : [{
           id : 19,
           name : 'F311',
-          value: true,
+          value: false,
           expand: false,
           data: []
         }]
@@ -142,14 +142,14 @@ export class AppComponent {
         {
           id : 20,
           name: 'F32',
-          value : true,
+          value : false,
           expand: false,
           data: []
         },
         {
           id : 21,
           name: 'F33',
-          value : true,
+          value : false,
           expand: false,
           data : []
         }
